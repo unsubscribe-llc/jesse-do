@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jesse Do — Brand Architect &amp; Best Coder in the Mars Area</title>
+<meta name="description" content="Jesse Do is a brand architect who builds identities, ships side projects, tells shaggy dog stories, and simulates random dog walks in three.js. Available for hire.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- TOPBAR START -->
+<header class="topbar" id="topbar">
+  <div class="topbar__inner">
+    <a href="#hero" class="topbar__name">Jesse Do</a>
+    <nav class="topbar__nav" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#simulator">Dog Lab</a>
+      <a href="#essays">Essays</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="topbar__cta">Hire Jesse</a>
+    </nav>
+  </div>
+</header>
+<!-- TOPBAR END -->
+
+<main id="main">
+
+  <!-- HERO SECTION START -->
+  <section class="hero" id="hero">
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="hero__eyebrow reveal">Brand Architect · Available for hire</p>
+        <h1 class="hero__name reveal">Jesse&nbsp;Do</h1>
+        <p class="hero__tagline reveal">I build brands that hold weight, ship the weird side projects nobody asked for, and — by a technicality I will defend to my grave — I am the best coder in the Mars area.</p>
+        <div class="hero__actions reveal">
+          <a href="#contact" class="btn btn--primary">Hire Jesse</a>
+          <a href="#work" class="btn btn--ghost">See selected work</a>
+        </div>
+      </div>
+      <div class="flair-badge" aria-hidden="true">
+        <svg viewBox="0 0 200 200" class="flair-badge__svg">
+          <defs>
+            <path id="badgeCircle" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/>
+          </defs>
+          <text>
+            <textPath href="#badgeCircle" startOffset="0%">BEST CODER IN THE MARS AREA &#8226; BRAND ARCHITECT &#8226; FLAIR ENGINEER &#8226; </textPath>
+          </text>
+        </svg>
+        <span class="flair-badge__center">★</span>
+      </div>
+    </div>
+  </section>
+  <!-- HERO SECTION END -->
+
+  <!-- SELECTED WORK SECTION START -->
+  <section class="work" id="work">
+    <div class="section__inner">
+      <h2 class="section__heading reveal">Selected Work</h2>
+      <ul class="work-list">
+        <li class="work-item reveal">
+          <span class="work-item__index">01</span>
+          <div class="work-item__body">
+            <h3 class="work-item__title">Making Stuff Happen</h3>
+            <p class="work-item__meta">Ongoing · Brand &amp; Product Consulting</p>
+            <p class="work-item__desc">An embedded consulting practice where Jesse joins founders for six intense weeks and turns a napkin sketch into a brand, a landing page, and a reason customers actually care.</p>
+          </div>
+          <span class="work-item__arrow" aria-hidden="true">→</span>
+        </li>
+        <li class="work-item reveal">
+          <span class="work-item__index">02</span>
+          <div class="work-item__body">
+            <h3 class="work-item__title">Code Party</h3>
+            <p class="work-item__meta">Monthly · Live-Streamed Gathering</p>
+            <p class="work-item__desc">A monthly, low-stakes coding gathering Jesse hosts and streams, where strangers build silly, ambitious little tools together until the sun comes up and nobody remembers whose idea it was.</p>
+          </div>
+          <span class="work-item__arrow" aria-hidden="true">→</span>
+        </li>
+        <li class="work-item reveal">
+          <span class="work-item__index">03</span>
+          <div class="work-item__body">
+            <h3 class="work-item__title">Art Party</h3>
+            <p class="work-item__meta">Recurring · Collaborative Studio</p>
+            <p class="work-item__desc">A paint-splattered collaboration between Jesse and a rotating cast of local artists, where brand-strategy rigor and total creative chaos produce gallery shows that double as identity systems.</p>
+          </div>
+          <span class="work-item__arrow" aria-hidden="true">→</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- SELECTED WORK SECTION END -->
+
+  <!-- DOG SIMULATOR SECTION START -->
+  <section class="simulator" id="simulator">
+    <div class="section__inner">
+      <h2 class="section__heading reveal">The Random Walk Dog Lab</h2>
+      <p class="simulator__intro reveal">Every brand decision Jesse makes is deliberate. This dog's decisions are not. Below is a small three.js dog taking a genuine two-dimensional random walk — a new uniformly random direction and step length chosen after every stop, exactly the kind of "no plan, just vibes" energy that keeps a Code Party going until 4am.</p>
+
+      <div class="simulator__stage reveal">
+        <div id="dog-canvas" class="dog-canvas" role="img" aria-label="A three-dimensional animated dog wandering a sandy plain along a random path"></div>
+        <div class="simulator__controls">
+          <button type="button" id="walk-toggle" class="btn btn--primary btn--small">Send the dog wandering</button>
+          <dl class="simulator__stats">
+            <div><dt>Steps taken</dt><dd id="sim-steps">0</dd></div>
+            <div><dt>Distance from start</dt><dd id="sim-distance">0.0</dd></div>
+          </dl>
+        </div>
+      </div>
+      <noscript><p class="js-note">Enable JavaScript to watch the dog wander — with it off, just imagine a very good, very lost dog.</p></noscript>
+    </div>
+  </section>
+  <!-- DOG SIMULATOR SECTION END -->
+
+  <!-- ANALYZER SECTION START -->
+  <section class="analyzer" id="analyzer">
+    <div class="section__inner">
+      <h2 class="section__heading reveal">The Distribution Analyzer</h2>
+      <p class="simulator__intro reveal">One dog's path is an anecdote. Three thousand dogs' paths are a distribution. Press run and the analyzer fires off thousands of independent random walks in fast-forward, sorting each one's final distance from home into a live-building histogram — the same statistical texture that shows up in diffusion, stock noise, and every "random" brand tagline generator Jesse has ever sworn off using.</p>
+      <div class="analyzer__stage reveal">
+        <canvas id="histogram-canvas" class="histogram-canvas" width="800" height="360" aria-label="Histogram of simulated random walk final distances"></canvas>
+        <div class="analyzer__controls">
+          <button type="button" id="run-sim-btn" class="btn btn--primary btn--small">Run 3,000 random walks</button>
+          <p id="sim-stats" class="analyzer__stats">Press run to simulate 3,000 independent 60-step random walks and see where they tend to land.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ANALYZER SECTION END -->
+
+  <!-- ESSAYS SECTION START -->
+  <section class="essays" id="essays">
+    <div class="section__inner">
+      <h2 class="section__heading reveal">Essays &amp; Shaggy Dog Stories</h2>
+      <p class="simulator__intro reveal">Long-form prose about brand work, small towns, and dogs that refuse to walk in a straight line. Click a title to unfold it.</p>
+
+      <details class="essay reveal">
+        <summary class="essay__summary">
+          <span class="essay__title">On Being the Best Coder in the Mars Area</span>
+          <span class="essay__toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="essay__body">
+          <p>I should clarify the claim before it does any more damage to my reputation. I am not, in any global sense, the best coder in the greater Mars area — the actual planet, four rocky orbits out, presently populated by exactly zero programmers and one very expensive rover with better uptime than most of my side projects. I am the best coder in Mars, Pennsylvania, a town of about 1,700 people roughly thirty minutes north of Pittsburgh, home to a water tower shaped like a flying saucer and, as far as I have been able to determine through several years of extremely informal research, precisely one professional software developer.</p>
+          <p>That developer is me. The title is real. The competition is not.</p>
+          <p>I tell this story at parties because it is, in miniature, the entire thesis of my career. A brand is not a claim about the whole world; it is a claim about a specific pond, made loudly and specifically enough that people stop asking whether the pond is big. Nobody has ever fact-checked "best coder in the Mars area" against a spreadsheet of Martian census data, because the sentence is doing its job before the joke even lands — it is memorable, it is oddly specific, and it makes you want to know more, which is the entire and only purpose of a tagline.</p>
+          <p>I have since built actual, defensible brand strategy decks using this exact logic for founders who were nervous about being small fish. You don't need the biggest pond. You need the pond where the sentence "best coder in the Mars area" is, on a technicality, completely true.</p>
+        </div>
+      </details>
+
+      <details class="essay reveal">
+        <summary class="essay__summary">
+          <span class="essay__title">The Dog, the Ditch, and the Deed to a Duplex</span>
+          <span class="essay__toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="essay__body">
+          <p>My neighbor Carl has a dog named Statistically Significant — Sig, for short, because Carl got a graduate degree in something quantitative and never really recovered from it — and for two summers I was Sig's unofficial afternoon walker, which is the actual, true origin of the dog simulator sitting a few sections above this paragraph.</p>
+          <p>Sig did not walk in lines. Sig walked the way a drunk mathematician might describe motion if you asked them to define it purely by vibes: a step toward a smell, a hard left toward a squirrel that existed only in Sig's imagination, a full stop at a fire hydrant for reasons that remain, to this day, classified. One Tuesday this took us four blocks out of our way and directly past a ditch behind the old Kowalczyk place, where Sig stopped dead, ears up, and refused to move another inch.</p>
+          <p>I assumed snake. I assumed groundhog. What I found, after ten minutes of increasingly undignified crouching, was a rusted metal box half-buried in the mud, and inside the box, wrapped in a dry-cleaning bag of all things, was a property deed to a duplex three streets over, made out to a name I did not recognize, dated 1987, with a sticky note reading "for whoever finds this, good luck with the second unit's plumbing."</p>
+          <p>I spent the better part of a month tracking down the family. It turned out the deed had been buried on purpose, as a sort of prank between brothers, and the duplex had changed hands legitimately four times since, meaning the document was a beautifully preserved piece of paper with the legal weight of a grocery list. Nobody owed anybody anything. The plumbing note, I later confirmed with the current owner, was accurate.</p>
+          <p>So the whole detour — the ditch, the crouching, the genealogy project, the plumbing — amounted to nothing but a story, which is, now that I think about it, exactly what a shaggy dog story is supposed to do. Sig, for the record, has never once apologized, and continues to walk on paths that satisfy no known optimization function except her own.</p>
+        </div>
+      </details>
+
+      <details class="essay reveal">
+        <summary class="essay__summary">
+          <span class="essay__title">Why Brand Architecture Is Just Load-Bearing Storytelling</span>
+          <span class="essay__toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="essay__body">
+          <p>People hire "branding" the way they hire a paint job — as decoration applied after the important decisions are made. I've never worked that way, and I don't think the good version of this job works that way either. The brand is the load-bearing wall. It decides which features get built, which customers get delighted and which get politely ignored, and whether the whole structure can take an addition later without the roof caving in.</p>
+          <p>My process is stubbornly simple. I start by asking what the company would still be true to say if it lost half its budget tomorrow. Whatever survives that question is the actual brand; everything else was decoration. Then I build outward from there — naming, voice, visual system, the first ten pieces of copy anyone will read — always checking the work against that one load-bearing sentence.</p>
+          <p>This is also, not coincidentally, why I keep a random walk simulator and a histogram generator on my own portfolio. If I'm going to ask a client to trust me with the sentence that holds their whole company up, I want them to see, plainly, that I can build real things: systems that run, math that checks out, a dog that genuinely wanders instead of just pretending to.</p>
+          <p>If you're building something that needs a wall like that — and needs someone who can also ship the front end that holds it up — that's the work I want.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+  <!-- ESSAYS SECTION END -->
+
+  <!-- ABOUT SECTION START -->
+  <section class="about" id="about">
+    <div class="section__inner about__inner">
+      <div class="about__portrait reveal" aria-hidden="true">
+        <!-- Swap this CSS placeholder for assets/img/photo1.jpg — a portrait of Jesse -->
+      </div>
+      <div class="about__text reveal">
+        <h2 class="section__heading">About</h2>
+        <p>I'm Jesse Do — a brand architect who spent a decade building identity systems for companies before realizing the same instincts apply to a dog on a leash, a spreadsheet of random numbers, or a monthly party of strangers writing code for fun. I like problems with a clear shape and no obvious punchline until you get there.</p>
+        <p>Day to day, I work with founders and small teams on naming, positioning, visual identity, and the front-end craft to actually ship it — landing pages, product UI, the occasional over-engineered side project that exists purely because I wanted to see if I could build it. I'm based near Mars, Pennsylvania, which I will bring up unprompted at least once during any first meeting.</p>
+        <ul class="about__list">
+          <li>Brand strategy &amp; naming</li>
+          <li>Visual identity systems</li>
+          <li>Front-end craft (HTML/CSS/JS, no shortcuts)</li>
+          <li>Workshop facilitation &amp; team offsites</li>
+          <li>Unreasonably specific side projects</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- ABOUT SECTION END -->
+
+  <!-- CTA SECTION START -->
+  <section class="cta" id="hire">
+    <div class="section__inner">
+      <h2 class="cta__heading reveal">Have a brand that needs a load-bearing wall?</h2>
+      <p class="cta__text reveal">I'm currently taking on a small number of new engagements — brand systems, product launches, or just an extra set of front-end hands. If the project has a real deadline and a real point of view, I'd like to hear about it.</p>
+      <a href="#contact" class="btn btn--primary btn--large reveal">Hire Jesse</a>
+    </div>
+  </section>
+  <!-- CTA SECTION END -->
+
+</main>
+
+<!-- CONTACT / FOOTER SECTION START -->
+<footer class="site-footer" id="contact">
+  <div class="section__inner site-footer__inner">
+    <div class="site-footer__col">
+      <h2 class="site-footer__heading">Let's talk</h2>
+      <p><a href="mailto:hello@jessedo.studio" class="site-footer__email">hello@jessedo.studio</a></p>
+      <p class="site-footer__note">Usually replies within a day or two — faster if the subject line has a pun in it.</p>
+    </div>
+    <nav class="site-footer__col site-footer__nav" aria-label="Footer">
+      <h2 class="site-footer__heading">Elsewhere</h2>
+      <a href="#work">Selected Work</a>
+      <a href="#simulator">Dog Lab</a>
+      <a href="#essays">Essays</a>
+      <a href="https://github.com" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com" rel="noopener">LinkedIn</a>
+    </nav>
+    <div class="site-footer__col">
+      <h2 class="site-footer__heading">Location</h2>
+      <p>Mars, Pennsylvania — and wherever the wifi holds up.</p>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <p>&copy; <span id="year">2024</span> Jesse Do. All rights reserved.</p>
+    <p class="yvow-credit">Built with help from <a href="https://yourveryownweb.site" rel="noopener">YourVeryOwnWeb.site</a></p>
+  </div>
+</footer>
+<!-- CONTACT / FOOTER SECTION END -->
+
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>
